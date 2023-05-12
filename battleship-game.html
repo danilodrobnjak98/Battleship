@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>batlleship-game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="battleship-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <script src="battleship-script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body onload="pocetak()">
+    <div class="row">
+        <div class="col-sm-12" id="header">
+            IGRA
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12" id="secondrow">
+            <br>
+            
+           
+            <p id="potez">
+                
+            </p>
+      
+          
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            Protivnikova tabela : 
+            <br>
+            <table class="protivnickaTabela" border="1px">
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                </tr>
+                <tr>
+                    <th>A</th>
+                    <td id="A11"  onclick="pucaj(this)"></td>
+                    <td id="A21"  onclick="pucaj(this)"></td>
+                    <td id="A31" onclick="pucaj(this)"></td>
+                    <td id="A41" onclick="pucaj(this)" ></td> 
+                    <td id="A51"  onclick="pucaj(this)"></td>
+                    <td id="A61" onclick="pucaj(this)"></td>
+                    <td id="A71" onclick="pucaj(this)"></td>
+                    <td id="A81" onclick="pucaj(this)"></td>
+                    <td id="A91" onclick="pucaj(this)"></td>
+                    <td id="A101" onclick="pucaj(this)"></td>
+                </tr>
+                <tr>
+                    <th>B</th>
+                    <td id="B11"  onclick="pucaj(this)"></td>
+                    <td id="B21"onclick="pucaj(this)"></td>
+                    <td id="B31"onclick="pucaj(this)"></td>
+                    <td id="B41" onclick="pucaj(this)"></td> 
+                    <td id="B51" onclick="pucaj(this)"></td>
+                    <td id="B61"onclick="pucaj(this)" ></td>
+                    <td id="B71" onclick="pucaj(this)"></td>
+                    <td id="B81"onclick="pucaj(this)"></td>
+                    <td id="B91" onclick="pucaj(this)"></td>
+                    <td id="B101" onclick="pucaj(this)"></td>
+                </tr>
+                <tr>
+                    <th>C</th>
+                    <td id="C11"onclick="pucaj(this)" ></td>
+                    <td id="C21"onclick="pucaj(this)"></td>
+                    <td id="C31"onclick="pucaj(this)"></td>
+                    <td id="C41"onclick="pucaj(this)"></td> 
+                    <td id="C51"onclick="pucaj(this)"></td>
+                    <td id="C61"onclick="pucaj(this)"></td>
+                    <td id="C71" onclick="pucaj(this)"></td>
+                    <td id="C81" onclick="pucaj(this)"></td>
+                    <td id="C91" onclick="pucaj(this)"></td>
+                    <td id="C101" onclick="pucaj(this)"></td>
+                </tr>
+                <tr>
+                    <th>D</th>
+                    <td id="D11" onclick="pucaj(this)"></td>
+                    <td id="D21"onclick="pucaj(this)"></td>
+                    <td id="D31"onclick="pucaj(this)"></td>
+                    <td id="D41"onclick="pucaj(this)"></td> 
+                    <td id="D51"onclick="pucaj(this)"></td>
+                    <td id="D61"onclick="pucaj(this)"></td>
+                    <td id="D71"onclick="pucaj(this)"></td>
+                    <td id="D81"onclick="pucaj(this)"></td>
+                    <td id="D91"onclick="pucaj(this)"></td>
+                    <td id="D101"onclick="pucaj(this)"></td>
+                </tr>
+                <tr>
+                    <th>E</th>
+                    <td id="E11" onclick="pucaj(this)"></td>
+                    <td id="E21"onclick="pucaj(this)"></td>
+                    <td id="E31"onclick="pucaj(this)"></td>
+                    <td id="E41"onclick="pucaj(this)"></td> 
+                    <td id="E51"onclick="pucaj(this)"></td>
+                    <td id="E61"onclick="pucaj(this)"></td>
+                    <td id="E71"onclick="pucaj(this)"></td>
+                    <td id="E81"onclick="pucaj(this)"></td>
+                    <td id="E91"onclick="pucaj(this)"></td>
+                    <td id="E101"onclick="pucaj(this)"></td>
+                </tr>
+                <tr>
+                    <th>F</th>
+                    <td id="F11"  onclick="pucaj(this)"></td>
+                    <td id="F21"onclick="pucaj(this)"></td>
+                    <td id="F31"onclick="pucaj(this)"></td>
+                    <td id="F41"onclick="pucaj(this)"></td> 
+                    <td id="F51"onclick="pucaj(this)"></td>
+                    <td id="F61"onclick="pucaj(this)"></td>
+                    <td id="F71"onclick="pucaj(this)"></td>
+                    <td id="F81"onclick="pucaj(this)"></td>
+                    <td id="F91"onclick="pucaj(this)"></td>
+                    <td id="F101"onclick="pucaj(this)"></td>
+                </tr>
+                <tr>
+                    <th>G</th>
+                    <td id="G11" onclick="pucaj(this)"></td>
+                    <td id="G21"onclick="pucaj(this)"></td>
+                    <td id="G31"onclick="pucaj(this)"></td>
+                    <td id="G41"onclick="pucaj(this)"></td> 
+                    <td id="G51"onclick="pucaj(this)"></td>
+                    <td id="G61"onclick="pucaj(this)"></td>
+                    <td id="G71"onclick="pucaj(this)"></td>
+                    <td id="G81"onclick="pucaj(this)"></td>
+                    <td id="G91"onclick="pucaj(this)"></td>
+                    <td id="G101"onclick="pucaj(this)"></td>
+                </tr>
+                <tr>
+                    <th>H</th>
+                    <td id="H11"onclick="pucaj(this)"></td>
+                    <td id="H21"onclick="pucaj(this)"></td>
+                    <td id="H31"onclick="pucaj(this)"></td>
+                    <td id="H41"onclick="pucaj(this)"></td> 
+                    <td id="H51"onclick="pucaj(this)"></td>
+                    <td id="H61"onclick="pucaj(this)"></td>
+                    <td id="H71"onclick="pucaj(this)"></td>
+                    <td id="H81"onclick="pucaj(this)"></td>
+                    <td id="H91"onclick="pucaj(this)"></td>
+                    <td id="H101"onclick="pucaj(this)"></td>
+                </tr>
+                <tr>
+                    <th>I</th>
+                    <td id="I11"onclick="pucaj(this)" ></td>
+                    <td id="I21"onclick="pucaj(this)"></td>
+                    <td id="I31"onclick="pucaj(this)"></td>
+                    <td id="I41"onclick="pucaj(this)"></td> 
+                    <td id="I51"onclick="pucaj(this)"></td>
+                    <td id="I61"onclick="pucaj(this)"></td>
+                    <td id="I71"onclick="pucaj(this)"></td>
+                    <td id="I81"onclick="pucaj(this)"></td>
+                    <td id="I91"onclick="pucaj(this)"></td>
+                    <td id="I101"onclick="pucaj(this)"></td>
+                </tr>
+                <tr>
+                    <th>J</th>
+                    <td id="J11" onclick="pucaj(this)"></td>
+                    <td id="J21" onclick="pucaj(this)"></td>
+                    <td id="J31" onclick="pucaj(this)"></td>
+                    <td id="J41" onclick="pucaj(this)"></td> 
+                    <td id="J51" onclick="pucaj(this)"></td>
+                    <td id="J61" onclick="pucaj(this)"></td>
+                    <td id="J71"onclick="pucaj(this)"></td>
+                    <td id="J81" onclick="pucaj(this)"></td>
+                    <td id="J91"onclick="pucaj(this)"></td>
+                    <td id="J101"onclick="pucaj(this)"></td>
+                </tr>
+            </table>
+
+
+        </div>
+
+        
+
+        <div class="col-sm-6">
+            Moja tabela : 
+            <table id="mojaTabela" border="1px">
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                </tr>
+                <tr>
+                    <th>A</th>
+                    <td id="A1"  ></td>
+                    <td id="A2" ></td>
+                    <td id="A3"  ></td>
+                    <td id="A4" ></td> 
+                    <td id="A5"  ></td>
+                    <td id="A6"  ></td>
+                    <td id="A7" ></td>
+                    <td id="A8"  ></td>
+                    <td id="A9"  ></td>
+                    <td id="A10"  ></td>
+                </tr>
+                <tr>
+                    <th>B</th>
+                    <td id="B1"  ></td>
+                    <td id="B2"></td>
+                    <td id="B3"></td>
+                    <td id="B4" ></td> 
+                    <td id="B5" ></td>
+                    <td id="B6" ></td>
+                    <td id="B7" ></td>
+                    <td id="B8"></td>
+                    <td id="B9" ></td>
+                    <td id="B10" ></td>
+                </tr>
+                <tr>
+                    <th>C</th>
+                    <td id="C1" ></td>
+                    <td id="C2"></td>
+                    <td id="C3"></td>
+                    <td id="C4"></td> 
+                    <td id="C5"></td>
+                    <td id="C6"></td>
+                    <td id="C7"></td>
+                    <td id="C8"></td>
+                    <td id="C9"></td>
+                    <td id="C10"></td>
+                </tr>
+                <tr>
+                    <th>D</th>
+                    <td id="D1" ></td>
+                    <td id="D2"></td>
+                    <td id="D3"></td>
+                    <td id="D4"></td> 
+                    <td id="D5"></td>
+                    <td id="D6"></td>
+                    <td id="D7"></td>
+                    <td id="D8"></td>
+                    <td id="D9"></td>
+                    <td id="D10"></td>
+                </tr>
+                <tr>
+                    <th>E</th>
+                    <td id="E1" ></td>
+                    <td id="E2"></td>
+                    <td id="E3"></td>
+                    <td id="E4"></td> 
+                    <td id="E5"></td>
+                    <td id="E6"></td>
+                    <td id="E7"></td>
+                    <td id="E8"></td>
+                    <td id="E9"></td>
+                    <td id="E10"></td>
+                </tr>
+                <tr>
+                    <th>F</th>
+                    <td id="F1" ></td>
+                    <td id="F2"></td>
+                    <td id="F3"></td>
+                    <td id="F4"></td> 
+                    <td id="F5"></td>
+                    <td id="F6"></td>
+                    <td id="F7"></td>
+                    <td id="F8"></td>
+                    <td id="F9"></td>
+                    <td id="F10"></td>
+                </tr>
+                <tr>
+                    <th>G</th>
+                    <td id="G1" ></td>
+                    <td id="G2"></td>
+                    <td id="G3"></td>
+                    <td id="G4"></td> 
+                    <td id="G5"></td>
+                    <td id="G6"></td>
+                    <td id="G7"></td>
+                    <td id="G8"></td>
+                    <td id="G9"></td>
+                    <td id="G10"></td>
+                </tr>
+                <tr>
+                    <th>H</th>
+                    <td id="H1"></td>
+                    <td id="H2"></td>
+                    <td id="H3"></td>
+                    <td id="H4"></td> 
+                    <td id="H5"></td>
+                    <td id="H6"></td>
+                    <td id="H7"></td>
+                    <td id="H8"></td>
+                    <td id="H9"></td>
+                    <td id="H10"></td>
+                </tr>
+                <tr>
+                    <th>I</th>
+                    <td id="I1" ></td>
+                    <td id="I2"></td>
+                    <td id="I3"></td>
+                    <td id="I4"></td> 
+                    <td id="I5"></td>
+                    <td id="I6"></td>
+                    <td id="I7"></td>
+                    <td id="I8"></td>
+                    <td id="I9"></td>
+                    <td id="I10"></td>
+                </tr>
+                <tr>
+                    <th>J</th>
+                    <td id="J1"></td>
+                    <td id="J2"></td>
+                    <td id="J3"></td>
+                    <td id="J4"></td> 
+                    <td id="J5"></td>
+                    <td id="J6"></td>
+                    <td id="J7"></td>
+                    <td id="J8"></td>
+                    <td id="J9"></td>
+                    <td id="J10"></td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            LEGENDA : <br>
+            Narandzasta boja : brod postavljen na tabli <br>
+            Siva : Promasaj <br>
+            Crvena : Pogodak <br>
+        </div>
+    </div>
+  
+</body>
+</html>

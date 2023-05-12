@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="battleship-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <title>battleship-setup</title>
+    <script src="battleship-script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body id="omotac" onload="start()">
+    
+      
+        <div class="row">
+            <div class="col-sm-12" id="header">
+
+             <h1>
+                 Podešavanja igre
+             </h1>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12" id="secondrow">
+                <br>
+                
+               
+                <p id="demo">
+                    
+                </p>
+          
+                <br>
+                <br>
+                
+            </div>
+        </div>
+       
+        <div class="row">
+            
+          <div class="col-sm-5 " id="gamebord">
+            
+
+         
+            
+                <table class="mytable" border="1px">
+                    <tr>
+                        <th></th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                    </tr>
+                    <tr>
+                        <th>A</th>
+                        <td id="A1" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)" ></td>
+                        <td id="A2"  onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="A3"  onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="A4"  onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="A5"  onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="A6"  onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="A7" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="A8"  onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="A9"  onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="A10"  onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>B</th>
+                        <td id="B1" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)" ></td>
+                        <td id="B2" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="B3" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="B4" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="B5" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="B6" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="B7" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="B8" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="B9" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="B10" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>C</th>
+                        <td id="C1"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)" ></td>
+                        <td id="C2"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="C3"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="C4"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="C5"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="C6"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="C7"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="C8"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="C9"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="C10"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>D</th>
+                        <td id="D1" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="D2"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="D3"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="D4"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="D5"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="D6"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="D7"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="D8"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="D9"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="D10"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>E</th>
+                        <td id="E1" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="E2"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="E3"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="E4"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="E5"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="E6"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="E7"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="E8"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="E9"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="E10"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>F</th>
+                        <td id="F1" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="F2"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="F3"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="F4"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="F5"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="F6"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="F7"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="F8"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="F9"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="F10"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>G</th>
+                        <td id="G1"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)" ></td>
+                        <td id="G2"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="G3"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="G4"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="G5"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="G6"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="G7"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="G8"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="G9"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="G10"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>H</th>
+                        <td id="H1"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="H2"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="H3"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="H4"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="H5"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="H6"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="H7"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="H8"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="H9"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="H10"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>I</th>
+                        <td id="I1" onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="I2"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="I3"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="I4"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="I5"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="I6"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="I7"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="I8"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="I9"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="I10"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                    <tr>
+                        <th>J</th>
+                        <td id="J1"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)" ></td>
+                        <td id="J2"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="J3"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="J4"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td> 
+                        <td id="J5"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="J6"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="J7"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="J8"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="J9"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                        <td id="J10"onmousedown="mdown(this)"onmouseover="mover(this)" onmouseup="mout(this)"></td>
+                    </tr>
+                </table>
+
+                
+            
+              
+
+          </div>
+          <div class="col-sm-7" id="gamebord">
+             <hr>
+            <p id="jednopolje"> </p> 
+              
+            <hr>
+            <p id="dvapolja"> </p>
+          
+            <hr>
+            <p id="tripolja"> </p>
+           
+            <hr>
+            <p id="cetiripolja"> </p>
+           
+            <hr>
+            
+            
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://www.linkedin.com/in/danilo-drobnjak-783976152/"> Danilo Drobnjak</a>
+          </div>
+          
+        
+
+      
+      
+    
+</body>
+</html>
